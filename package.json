@@ -1,0 +1,18 @@
+{
+  "name": "7.7-cypress2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:bookingMovie": "cypress run --record --group BM --spec 'cypress/e2e/bookingMovie.cy.js' --ci-build-id 12",
+    "test:loginAdmin": "cypress run --record --group LA --spec 'cypress/e2e/loginAdmin.cy.js' --ci-build-id 12",
+    "test:parallel": "run-p -c test:bookingMovie test:loginAdmin"
+  },
+  "author": "Artyushin V",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.1.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.0.3"
+  }
+}
